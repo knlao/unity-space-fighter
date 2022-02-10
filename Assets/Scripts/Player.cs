@@ -63,9 +63,10 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy Bullet"))
         {
-            Instantiate(explosion, transform.position, new Quaternion(0, 0, 0, 0));
+            // Instantiate(explosion, transform.position, new Quaternion(0, 0, 0, 0));
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            FindObjectOfType<GameManager>().DoDamage(3);
         }
     }
 }

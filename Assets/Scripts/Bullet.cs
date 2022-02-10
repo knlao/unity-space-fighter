@@ -6,10 +6,12 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed;
 
     private float reachPoint;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        reachPoint = transform.position.y + 10;
+        reachPoint = Mathf.Abs(transform.position.y) + 10;
+        print(transform.rotation.eulerAngles.normalized);
     }
 
     private void Update()
@@ -17,6 +19,16 @@ public class Bullet : MonoBehaviour
         rb.velocity = Vector3.up * bulletSpeed;
         if (Mathf.Abs(transform.position.y) >= reachPoint)
         {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy Bullet") || collision.gameObject.CompareTag("Player Bullet"))
+        {
+                print("BOOM!");
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }

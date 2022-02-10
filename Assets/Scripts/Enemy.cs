@@ -12,8 +12,7 @@ public class Enemy : MonoBehaviour
     public float force;
     public bool canShoot = false;
     public GameObject bullet;
-    public GameObject[] gunTypes;
-    public int  currentGunType = 0;
+    public GameObject gun;
     public float fireRate;
     public GameObject explosion;
 
@@ -54,7 +53,7 @@ public class Enemy : MonoBehaviour
     
     private void ShootBullet()
     {
-        Transform[] guns = gunTypes[currentGunType-1].GetComponentsInChildren<Transform>();
+        Transform[] guns = gun.GetComponentsInChildren<Transform>();
         for (int i = 1; i < guns.Length; i++)
         {
             Instantiate(bullet, guns[i].position, new Quaternion(0, 0, 0, 0));

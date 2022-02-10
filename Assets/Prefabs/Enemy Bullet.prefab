@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7231216098929616056}
   - component: {fileID: 7524323709610538659}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1304880092803867202}
   - component: {fileID: 1304880092803867261}
   - component: {fileID: 1304880092803867260}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Enemy Bullet
   m_TagString: Enemy Bullet
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 2178457315412946125}
   - component: {fileID: 2611084746805389046}
   - component: {fileID: 9134318826732992962}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1304880092803867261}
   - component: {fileID: 1304880092803867260}
   - component: {fileID: 3418249563263010262}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player Bullet
   m_TagString: Player Bullet
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621379332002662411}
   - component: {fileID: 1349113716767622182}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 2178457315412946125}
   - component: {fileID: 2611084746805389046}
   - component: {fileID: 9134318826732992962}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5043,7 +5043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1515686097987215061}
   - component: {fileID: 4168478821778676538}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail Fun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

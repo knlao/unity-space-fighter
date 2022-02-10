@@ -14,7 +14,7 @@ namespace PowerUps
 
         void Update()
         {
-            transform.position = Vector3.Lerp(transform.position, target, damping * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target, damping * Time.deltaTime);
             
             if (Vector3.Distance(new Vector3(0, 0, 0), transform.position) <= 1)
             {
