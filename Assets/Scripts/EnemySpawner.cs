@@ -61,7 +61,7 @@ public class EnemySpawner : MonoBehaviour
                 newEnemy.GetComponent<Enemy>().canShoot = true;
             }
             
-            newEnemy.GetComponent<Enemy>().canShoot = true;
+            // newEnemy.GetComponent<Enemy>().canShoot = true;
         }
     }
 }

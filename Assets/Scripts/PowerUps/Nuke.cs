@@ -23,7 +23,7 @@ namespace PowerUps
                 Collider[] enemies = Physics.OverlapSphere(transform.position, 100);
                 foreach (Collider enemy in enemies)
                 {
-                    if (enemy.CompareTag("Enemy"))
+                    if (enemy.CompareTag("Enemy") || enemy.CompareTag("Enemy Bullet"))
                     {
                         FindObjectOfType<GameManager>().AddScore(100);
                         FindObjectOfType<UIManager>().UpdateScoreText(FindObjectOfType<GameManager>().score);

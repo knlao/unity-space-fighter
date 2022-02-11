@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy Bullet") || collision.gameObject.CompareTag("Player Bullet"))
         {
-                print("BOOM!");
+            print("BOOM!");
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
