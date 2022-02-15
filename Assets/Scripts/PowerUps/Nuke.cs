@@ -12,6 +12,12 @@ namespace PowerUps
 
         public GameObject explosion;
 
+        private void Start()
+        {
+            
+            FindObjectOfType<NukeSFXBGM>().PlaySFX();
+        }
+
         void Update()
         {
             transform.position = Vector3.MoveTowards(transform.position, target, damping * Time.deltaTime);
@@ -19,7 +25,7 @@ namespace PowerUps
             if (Vector3.Distance(new Vector3(0, 0, 0), transform.position) <= 1)
             {
                 Instantiate(explosion);
-                FindObjectOfType<NukeSFX>().PlaySFX(0);
+                FindObjectOfType<NukeSFX>().PlaySFX();
                 Collider[] enemies = Physics.OverlapSphere(transform.position, 100);
                 foreach (Collider enemy in enemies)
                 {

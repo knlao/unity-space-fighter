@@ -54,7 +54,9 @@ MonoBehaviour:
   bullet: {fileID: 1304880092803867263, guid: b503109de2b130c4dbfbe41dd4c0883d, type: 3}
   gun: {fileID: 5461846489589132105}
   fireRate: 2
-  explosion: {fileID: 100004, guid: 6e8c7c425e5bc374daf95a774767b1e3, type: 3}
+  explosions:
+  - {fileID: 100004, guid: 6e8c7c425e5bc374daf95a774767b1e3, type: 3}
+  - {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 3}
   damage: 20
   score: 100
 --- !u!65 &5461846488734664826

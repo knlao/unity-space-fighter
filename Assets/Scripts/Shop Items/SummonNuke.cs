@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 namespace Shop_Items
@@ -13,10 +14,25 @@ namespace Shop_Items
 
         public GameObject nukePrefab;
 
+        public bool isDisabled = false;
+
+        public float reloadTime;
+        private float nextEnableTime;
+
         private void Start()
         {
             purchaseButton.enabled = true;
             requireMoneyText.text = "$" + requireMoney;
+        }
+
+        private void Update()
+        {
+            if (isDisabled && Time.time >= nextEnableTime)
+            {
+                isDisabled = false;
+            }
+
+            purchaseButton.enabled = !isDisabled;
         }
 
         public void Summon()
@@ -31,6 +47,8 @@ namespace Shop_Items
             }
             
             requireMoneyText.text = "$" + requireMoney;
+            isDisabled = true;
+            nextEnableTime = Time.time + reloadTime;
         }
     }
 }

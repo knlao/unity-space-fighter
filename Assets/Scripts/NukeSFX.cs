@@ -24,9 +24,9 @@ public class NukeSFX : MonoBehaviour
         au = GetComponents<AudioSource>();
     }
 
-    public void PlaySFX(int index)
+    public void PlaySFX()
     {
-        au[auIdx].clip = clips[index];
+        au[auIdx].clip = clips[0];
         au[auIdx].Play();
         auIdx++;
         if (auIdx >= au.Length)

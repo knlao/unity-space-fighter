@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public GameObject bullet;
     public GameObject gun;
     public float fireRate;
-    public GameObject explosion;
+    public GameObject[] explosions;
 
     public int damage;
     public int score;
@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
         Transform[] guns = gun.GetComponentsInChildren<Transform>();
         for (int i = 1; i < guns.Length; i++)
         {
-            Instantiate(bullet, guns[i].position, new Quaternion(0, 0, 0, 0));
+            Instantiate(bullet, guns[i].position, new Quaternion(0, 0, Random.Range(0, 180f), 0));
         }
     }
 
@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player Bullet"))
         {
-            Instantiate(explosion, transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(explosions[Random.Range(0, explosions.Length)], transform.position, new Quaternion(0, 0, 0, 0));
             FindObjectOfType<GameManager>().AddScore(score);
             FindObjectOfType<SFX>().PlaySFX(1);
             Destroy(other.gameObject);
@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            Instantiate(explosion, transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(explosions[Random.Range(0, explosions.Length)], transform.position, new Quaternion(0, 0, 0, 0));
             FindObjectOfType<GameManager>().DoDamage(damage/2);
             FindObjectOfType<SFX>().PlaySFX(1);
             Destroy(gameObject);

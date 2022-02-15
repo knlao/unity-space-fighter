@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
 
     public void UpdateHealthBar(int health)
@@ -58,6 +58,11 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+
+    public void toGithub()
+    {
+        Application.OpenURL("https://github.com/knlao/unity-space-fighter");
     }
 
     public void GameOver()
